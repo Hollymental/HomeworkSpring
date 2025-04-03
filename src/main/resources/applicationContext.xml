@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="myRepository" class="org.example.MyRepository"/>
+
+    <bean id="myService" class="org.example.MyService">
+        <constructor-arg ref="myRepository"/>
+    </bean>
+
+    <bean id="anotherService" class="org.example.AnotherService"/>
+
+    <bean class="org.example.CustomBeanPostProcessor"/>
+</beans>
